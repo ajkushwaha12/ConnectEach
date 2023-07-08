@@ -1,0 +1,245 @@
+:root{
+    --color-dark: hsl(252, 30%, 17%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-black: hsl(0, 0%, 3%);
+    --color-white: hsl(252, 30%, 100%);
+    --color-blue: hsl(255, 82%, 46%);
+
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --card-padding: 1rem;
+
+
+}
+
+.btn-blue{
+    background: var(--color-blue);
+    color: var(--color-white);
+}
+.btn-gray{
+    background: var(--color-gray);
+    color: var(--color-white);
+}
+
+.profile-main{
+    flex-basis: 73%;
+   
+    
+}
+
+.profile-sidebar{
+    flex-basis: 23%;
+    align-self: flex-start;
+    position: sticky;
+    top: 73px;
+   
+}
+
+.profile-main .profile-container{
+    background: white;
+    border-radius: var(--card-border-radius);
+}
+
+.profile-main .profile-container .cover-round{
+    border-top-right-radius: var(--card-border-radius);
+    border-top-left-radius: var(--card-border-radius);
+}
+.profile-main .profile-container-inner{
+    padding: 0 4% 10px;
+}
+.profile-main .profile-pic{
+    width: 150PX;
+    border-radius: 50%;
+    margin-top: -75px;
+    padding: 5px;
+    background: white;
+}
+
+.profile-main .profile-container h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-dark);
+    
+}
+.profile-main .profile-container b{
+    font-weight: 500;
+
+}
+.profile-main .profile-container p{
+    margin-top: 5px;
+}
+.profile-main .profile-container p a{
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.mutual-connection{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+.mutual-connection img{
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.profile-button{
+    margin: 20px 0;
+    gap: 10rem;
+}
+.profile-button a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    color: var(--color-white);
+
+}
+.profile-description{
+    background: var(--color-white);
+    padding: 20px 4% 30px;
+    margin: 12px 0;
+    border-radius: var(--card-border-radius);
+
+}
+.profile-description .edit-button{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.profile-description .edit-button h2{
+    color: #333;
+    
+    font-weight: 600;
+
+}
+.profile-edit{
+    display: flex;
+    gap: 1rem;
+}
+.see-more-link{
+    display: block;
+    text-align: right;
+    font-size: 15px;
+}
+.profile-desc-row img{
+    width: 50px;
+    margin-right: 25px;
+    margin-top: 5px;
+
+}
+.profile-desc-row{
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+.profile-desc-row div{
+    width: 100%;
+}
+.profile-desc-row h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.profile-desc-row b{
+    display: block;
+    font-weight: 500;
+    font-size:15px ;
+}
+.profile-desc-row p{
+    margin-top: 15px;
+}
+.profile-desc-row hr{
+    border: 0;
+    border-bottom: 1px solid #999;
+    margin-top: 10px;
+}
+.experience-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-weight: 500;
+}
+.skill-btn a{
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 6px 18px;
+    border: 1px solid #777;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.lan-btn a{
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 6px 18px;
+    background: #e4e6eb;
+    font-size: 12px;
+    font-weight: 500;
+}
+.know-people{
+    background: var(--color-white);
+    padding: 25px;
+    padding-right: 60px;
+    margin: 1px 0;
+    font-size: 12px;
+    border-radius: var(--card-border-radius);
+}
+.know-people h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-left: 0;
+    color: #333;
+}
+.know-people-row{
+    display: flex;
+    align-items: flex-start;
+    margin: 6px 0 ;
+
+}
+.know-people-row img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+.know-people-row button{
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px 25px;
+    border: 1px solid #5f5f5f;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width: 600px){
+
+.profile-main, .profile-sidebar{
+    flex-basis: 100%;
+}
+.know-people{
+    font-size: 14px;
+}
+.profile-pic{
+    width: 100px;
+    margin-top: -50px;
+}
+.profile-description{
+    font-size: 14px;
+}
+}

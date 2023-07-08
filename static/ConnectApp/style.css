@@ -1,0 +1,293 @@
+
+:root{
+    --color-dark: hsl(252, 30%, 17%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsla(289, 95%, 47%, 0.95);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-black: hsl(0, 0%, 3%);
+    --color-white: hsl(252, 30%, 100%);
+
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --card-padding: 1rem;
+
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+body{
+    background: var(--color-light);
+    color: var(--color-black);
+}
+a{
+    text-decoration: none;
+    color: var(--color-black);
+}
+.back{
+    background-color: white;
+}
+button{
+    border: none;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+}
+.btn-secondary {
+    background: var(--color-danger);
+    color: white;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.navbar-main{
+    width: 100%;
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-white);
+    padding: 3px 6%  3px 3%;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0 0.313rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+.logo img{
+    width: 14rem;
+    margin-right: var(--card-padding);
+    display: block;
+    padding-right: 15px;
+
+}
+.navbar-center ul li{
+    display: inline-block;
+    list-style: none;
+
+}
+.navbar-center ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0.33rem 0.5rem;
+    padding-right: 0.33rem;
+    position: relative;
+    text-decoration: none;
+    text-transform: none;
+    /* style for navbar items */
+}
+.navbar-center ul li a img{
+    width: 1.1rem;
+    /* size of icons */
+    
+}
+.navbar-center ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--color-primary);
+    position: absolute;
+    bottom: -15px;
+    transition: width 0.3s;
+    /* line below the navbar icons */
+}
+.navbar-center ul li a:hover::after,
+.navbar-center ul li a.active-link::after{
+    width: 100%;
+
+} 
+
+.nav-profile-img{
+    width: 2.5rem;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    /* profile image in navbar */
+}
+.online{
+    position: relative;
+}
+.online::after{
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    right: 0px;
+    top: 0px;
+    background: var(--color-success);
+    position: absolute;
+    /* profile pic over a blue circle which deteminant the user is online */
+}
+.search-box{
+    background: var(--color-light);
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    /* search box background color and icon and box in same line  */
+}
+.search-box img{
+    width: 16px;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+    /* logo and search box for same line */
+
+}
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+}
+
+/* Navabar end */
+
+.container{
+    padding: 20px 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+/* --------------PROFILE MENU WRAP------------ */
+
+nav .profile-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 3%;
+    width: 250px;
+    margin-top: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+   
+}
+nav .profile-menu-wrap.open-menu{
+    max-height: 400px;
+}
+nav .profile-menu{
+    background: var(--color-dark);
+    color: var(--color-white);
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: var(--card-border-radius);
+}
+nav .user-info{
+    display: flex;
+    align-items: center;
+}
+nav .user-info img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+nav .user-info h3{
+    font-weight: 500;
+    margin-bottom: -7px;
+    font-size: 20px;
+}
+nav .user-info a{
+    color: bisque;
+    font-size: 13px;
+}
+
+nav .profile-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--color-white);
+    margin: 15px 0 10px;
+}
+nav .profile-menu .bi{
+    width: 40px;
+    fill: aqua;
+    margin-right: 10px;
+
+    
+}
+nav .profile-menu-link{
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    margin: 12px 0;
+    font-size: 14px;
+}
+nav .profile-menu-link p{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ***************************MEDIA QUERY FOR SMALL SCREEN***************************************** */
+
+@media only screen and (max-width: 600px){
+    .search-box{
+        background: transparent;
+        width: auto;
+        padding: 0;
+    }
+    .search-box input{
+        width: 0;
+        padding: 0;
+    }
+    .navbar-center ul li a span{
+        display: none;
+    }
+    .navbar-center ul li a{
+        padding-right: 0;
+        margin: 5px;
+    }
+    .logo img{
+        width: 100px;
+    }
+    .nav-profile-img{
+        width: 30px;
+    }
+   
+
+
+    
+} 
